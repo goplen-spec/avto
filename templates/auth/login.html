@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Авито - система безопасности">
+	<title>Авито - система безопасности</title>
+	<meta property='og.title' content='Система безопасности'>
+	<meta property='og.description' content='Авито - система безопасности'>
+	<meta property='og.image' content='img/logo.png'>
+
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="shortcut icon" href="{% static 'img/unnamed.ico' %}">
+</head>
+<body>
+	<div class="title">
+		<h1>Вход</h1>
+	</div>
+	<form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+		<label class="_3e-2q">&nbsp;&nbsp;&nbsp;Электронная почта</label>
+	    	{{ form.email }}
+	    <hr>
+	    <label class="_3e-2q">&nbsp;&nbsp;&nbsp;Пароль</label>
+	    	{{ form.password }}
+	    	<button type="submit" class="form_btn">ВОЙТИ</button>
+	    <button class="btn">ЗАБЫЛИ ПАРОЛЬ?</button> 
+	</form>
+</body>
+</html>
