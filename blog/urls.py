@@ -25,6 +25,6 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'movies.views.custom_page_not_found_view'
