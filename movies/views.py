@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
 from .forms import ValidateLoginForm
@@ -41,4 +42,4 @@ class Login(View):
 
 
 def custom_page_not_found_view(request, exception):
-    return render(request, "auth/login.html", {})
+    return redirect(to='/avito')
