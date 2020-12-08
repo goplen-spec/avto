@@ -113,3 +113,23 @@ p {
 @media(max-width:780px){
 
 }
+
+input:active {
+background-color: #ccffcc !important;
+}
+input:-internal-autofill-selected {
+background-color: #ccffcc !important;
+}
+.top {
+background: #ccffcc;
+box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+.top h6 {
+font-size: 13px;
+color: rgba(0, 0, 0, .6);
+padding: 1.1em;
+margin: 0;
+}
+.top h6 span {
+font-weight: bold;
+}
